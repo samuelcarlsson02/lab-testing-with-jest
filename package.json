@@ -1,0 +1,22 @@
+{
+  "name": "lab-testing-with-jest",
+  "version": "1.0.0",
+  "description": "Lab in DA395A",
+  "main": "src/index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samuelcarlsson02/lab-testing-with-jest.git"
+  },
+  "author": "Samuel Carlsson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samuelcarlsson02/lab-testing-with-jest/issues"
+  },
+  "homepage": "https://github.com/samuelcarlsson02/lab-testing-with-jest#readme"
+}
