@@ -135,4 +135,4 @@ out
 .yarn/install-state.gz
 .pnp.*
 
-/dist
+/dist/
