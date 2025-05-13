@@ -36,7 +36,7 @@ test('pop on stack removes the latest element', async () => {
     await pop.click();
     alert = await driver.switchTo().alert();
     alertText = await alert.getText();
-    expect(alertText).toEqual("Tog bort Test1"); // Medvetet fel för att få testet att misslyckas
+    expect(alertText).toEqual("Tog bort Test2");
     await alert.accept();
 
     // Verifiera att det översta elementet nu är "Test1"
