@@ -34,3 +34,29 @@ describe('Clicking "Pusha till stacken"', () => {
         await alert.accept();
     });
 });
+
+test('pop on stack removes the latest element', async () => {
+    let push = await driver.findElement(By.id('push'));
+    await push.click();
+    let alert = await driver.switchTo().alert();
+    await alert.sendKeys("Test1");
+    await alert.accept();
+
+    await push.click();
+    alert = await driver.switchTo().alert();
+    await alert.sendKeys("Test2");
+    await alert.accept();
+
+    let pop = await driver.findElement(By.id('pop'));
+    await pop.click();
+    alert = await driver.switchTo().alert();
+    alertText = await alert.getText();
+    expect(alertText).toEqual("Tog bort Test2");
+    await alert.accept();
+
+    // Verifiera att det översta elementet nu är "Test1"
+    let peek = await driver.findElement(By.id('peek'));
+    await peek.click();
+    let stack = await driver.findElement(By.id('top_of_stack')).getText();
+    expect(stack).toEqual("Test1");
+});
